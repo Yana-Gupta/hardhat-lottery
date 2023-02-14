@@ -13,7 +13,6 @@ developmentChains.includes(network.name)
 
       beforeEach(async function () {
         deployer = (await getNamedAccounts()).deployer
-        await deployments.fixture(["all"])
         lottery = await ethers.getContract("Lottery", deployer)
         lotteryEnterenceFee = await lottery.getEnterenceFee()
       })
