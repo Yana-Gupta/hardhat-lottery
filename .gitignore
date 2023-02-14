@@ -1,7 +1,7 @@
+artifacts
+cache
+deployments
 node_modules
-.env
 coverage
 coverage.json
-
-cache
-artifacts
+typechain
