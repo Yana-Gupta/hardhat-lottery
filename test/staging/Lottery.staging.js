@@ -1,18 +1,18 @@
-const { deployments, getNamedAccounts, ethers, network } = require("hardhat")
+const { getNamedAccounts, ethers, network } = require("hardhat")
 const { assert, expect } = require("chai")
 
-const {
-  developmentChains,
-  networkConfig,
-} = require("../../helper-hardhat-config.js")
+const { developmentChains } = require("../../helper-hardhat-config.js")
 
 developmentChains.includes(network.name)
   ? describe.skip
   : describe("Lottery", function () {
       let lottery, deployer, lotteryEnterenceFee
 
+      const chainId = network.config.chainId
+
       beforeEach(async function () {
         deployer = (await getNamedAccounts()).deployer
+        await deployments.fixture(["all"])
         lottery = await ethers.getContract("Lottery", deployer)
         lotteryEnterenceFee = await lottery.getEnterenceFee()
       })
@@ -25,6 +25,7 @@ developmentChains.includes(network.name)
             console.log("WinnerPicked event fired!")
             lottery.once("WinnterPicked", async () => {
               try {
+                console.log("WinnerPicked fired ✊  ....")
                 const recentWinner = await lottery.getRecentWinner()
                 const lotteryState = await lottery.getLotteryState()
                 const winnerEndingBalance = await accounts[0].getBalance()
@@ -41,6 +42,7 @@ developmentChains.includes(network.name)
                 assert.equal(endgingTimeStamp > startingTimeStamp)
                 resolve()
               } catch (e) {
+                console.log(e)
                 reject(e)
               }
             })
