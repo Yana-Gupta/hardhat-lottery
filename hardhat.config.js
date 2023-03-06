@@ -13,18 +13,22 @@ module.exports = {
   },
   solidity: "0.8.17",
   defaultNetwork: "hardhat",
+  allowUnlimitedContractSize: true,
   networks: {
     hardhat: {
       chainId: 31337,
       blockConformations: 1,
+      allowUnlimitedContractSize: true
     },
     goerli: {
       url: process.env.GOERLI_RPC_URL,
       accounts: [ process.env.PRIVATE_KEY1, process.env.PRIVATE_KEY2],
       chainId: 5,
+      allowUnlimitedContractSize: true,
       blockConformations: 5,
-      gas: 2100000,
-      gasPrice: 80000000, 
+      gas: 5000000,
+      gasPrice: 50000000000, 
+      allowUnlimitedContractSize: true
     },
   },
   namedAccounts: {

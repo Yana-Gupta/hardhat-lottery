@@ -70,7 +70,7 @@ contract Lottery is VRFConsumerBaseV2, KeeperCompatibleInterface {
     i_interval = interval;
   }
 
-  function getEnterenceFee() public view returns (uint256) {
+  function getEntranceFee() public view returns (uint256) {
     return i_entranceFee;
   }
 

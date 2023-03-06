@@ -12,9 +12,9 @@ const verify = async (contractAddress, arguments) => {
     if (e.message.toLowerCase().includes("already verified")) {
       console.log("Already verified 🇵🇲 ")
     } else {
-      console.log("Error: ", e)
+      console.log("Error ❄️ : ", e)
     }
   }
 }
 
-module.exports = {verify}
+module.exports = { verify }

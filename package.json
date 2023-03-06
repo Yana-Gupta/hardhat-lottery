@@ -1,23 +1,30 @@
 {
-  "name": "hardhat-project",
-  "devDependencies": {
-    "@chainlink/contracts": "^0.4.1",
-    "@nomicfoundation/hardhat-toolbox": "^1.0.2",
-    "@nomiclabs/hardhat-ethers": "npm:hardhat-deploy-ethers@^0.3.0-beta.13",
-    "@nomiclabs/hardhat-etherscan": "^3.1.6",
-    "chai": "^4.3.7",
-    "dotenv": "^16.0.3",
-    "ethereum-waffle": "^4.0.9",
-    "ethers": "^5.7.2",
-    "hardhat": "^2.12.7",
-    "hardhat-contract-sizer": "^2.8.0",
-    "hardhat-deploy": "^0.11.23",
-    "hardhat-deploy-ethers": "^0.3.0-beta.13",
-    "hardhat-test-utils": "^0.1.1",
-    "solidity-coverage": "^0.7.22"
+  "name": "hardhat-lottery",
+  "version": "1.0.0",
+  "description": "",
+  "main": "hardhat.config.js",
+  "directories": {
+    "test": "test"
   },
-  "dependencies": {
-    "ethers-utils": "^2.1.11",
-    "solc": "^0.8.0"
-  }
+  "devDependencies": {
+    "@chainlink/contracts": "^0.6.1",
+    "@nomicfoundation/hardhat-toolbox": "^2.0.2",
+    "dotenv": "^16.0.3",
+    "hardhat": "^2.13.0",
+    "hardhat-deploy": "^0.11.24",
+    "hardhat-deploy-ethers": "^0.3.0-beta.13"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Yana-Gupta/hardhat-lottery.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Yana-Gupta/hardhat-lottery/issues"
+  },
+  "homepage": "https://github.com/Yana-Gupta/hardhat-lottery#readme"
 }
